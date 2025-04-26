@@ -1,13 +1,10 @@
 /* Base Styles */
 :root {
 	font-size: 17px;
-
-    --accent-color: #1C1E22;
-
+	--accent-color: #1C1E22;
 	--text-color: #F4F4F6;
 	--highlight: #FF5C5C;
 	--link-color: #ffffff;
-
 	--background-primary-color: #2E3138;
 	--background-secondary-color: #373B43;
 }
@@ -25,20 +22,13 @@ html {
 	font-weight: normal;
 	src: url("fonts/Merriweather-VariableFont_opsz\,wdth\,wght.ttf");
 }
-/* 
-@font-face {
-    font-family: "Steph";
-    src: url("fonts/steph-font-bold.ttf");
-    font-weight: bold;
-} */
 body {
 	font-family: 'Merriweather', sans-serif;
 }
-
 a {
 	text-decoration: none;
-	/* color: var(--text-color); */
 }
+/* Navigation bar */
 nav {
 	display: flex;
 	position: fixed;
@@ -70,7 +60,6 @@ nav .left a:hover {
 	transition: 0.2s;
 	color: var(--highlight);
 }
-
 /* General Section Styles */
 section {
 	flex-direction: column;
@@ -79,7 +68,6 @@ section {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 	padding: 8rem 2rem;
 	min-height: 80vh;
-	/* text-align: center; */
 	/* Reduce the default minimum height */
     display: flex;
 	gap: 2rem;
@@ -90,7 +78,6 @@ section:nth-of-type(odd) {
 section:nth-of-type(even) {
 	background-color: #373B43;
 }
-
 /* Section Heading Styles */
 section h2 {
 	position: relative;
@@ -111,7 +98,6 @@ section h2::after {
 	height: 4px;
 	content: '';
 }
-
 /* About Section */
 #about-section {
 	display: flex;
@@ -144,9 +130,6 @@ section h2::after {
 	height: 100%;
 	object-fit: cover;
 }
-/* #about-section .headshot img:hover {
-    transform: scale(1.2);
-} */
 #about-section .bio {
 	margin-bottom: 2rem;
 	padding: 0 2rem;
@@ -175,73 +158,31 @@ section h2::after {
 	color: #BDD5EF;
 	font-weight: 500;
 }
-
-/* Experience Section */
-#experience-section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100vh;
-	text-align: center;
-	gap: 2rem;
-}
-#experience-section h2 {
-	margin-bottom: 1rem;
-	font-size: 2.75rem;
-	font-weight: 700;
-}
-#experience-section .experience-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	max-width: 56.25rem;
-	gap: 2rem;
-}
-#experience-section .experience-box {
-	border-radius: 0.5rem;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	background-color: #bfd6c4;
-	padding: 2rem;
-	width: 100%;
-	text-align: left;
-}
-#experience-section .experience-box h3 {
-	margin-bottom: 0.5rem;
-	font-size: 1.5rem;
-	font-weight: 600;
-}
-#experience-section .experience-box p {
-	margin-bottom: 0.5rem;
-	font-size: 1rem;
-	font-weight: 300;
-}
-
 /* Projects Section */
 .project-subcontainer {
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
 	justify-content: center;
+	width: 100%;
 	gap: 1cm;
 }
 .project-subcontainer > a {
+	border-radius: 5px;
+	background-color: var(--accent-color);
+	padding: 0.5cm;
+	width: 25%;
+	min-height: fit-content;
+	text-align: left;
+	color: white;
 	hr {
 		margin-bottom: 0.4cm;
 	}
-	width: 25%;
-	min-height: fit-content;
-	border-radius: 5px;
-	padding: 0.5cm;
-	background-color: var(--accent-color);
-	color: white;
-	text-align: left;
 }
 .project-subcontainer > a > div {
 	margin-bottom: 0.5cm;
+	border-radius: 5px;
 	width: 100%;
 	height: 4cm;
-	border-radius: 5px;
 }
 .project-subcontainer > a p {
 	font-size: 14px;
@@ -252,7 +193,6 @@ section h2::after {
 	align-items: center;
 	width: 100%;
 	min-height: 100vh;
-	/* text-align: center; */
 	gap: 2rem;
 }
 #projects-section h2 {
@@ -286,9 +226,8 @@ section h2::after {
 	border: 1px solid #424242;
 	border-radius: 0.5rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	/* background-color: #f9f9f9; */
-	padding: 1rem;
 	background-color: var(--accent-color);
+	padding: 1rem;
 }
 .project-box:hover {
 	transform: scale(0.95);
@@ -316,7 +255,47 @@ section h2::after {
 	font-size: 1rem;
 	font-weight: 300;
 }
-
+/* Hackathon section */
+#hackathon-section {
+	display: flex;
+}
+#hackathon-section .hackathon-container {
+	display: flex;
+	gap: 1cm;
+}
+#hackathon-section .hackathon-container div {
+	border: 1px solid #424242;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: var(--accent-color);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 5cm;
+	padding: 0.5cm;
+	width: 8cm;
+	height: fit-content;
+	min-height: 8cm;
+	color: white;
+}
+#hackathon-section .hackathon-container div hr {
+	margin: 0.2cm 0 0.3cm 0;
+}
+#hackathon-section .hackathon-container div h4 {
+	margin-bottom: 0.5rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+#hackathon-section .hackathon-container div p {
+	margin: 0.2cm 0 0 0;
+	color: #c7c7c7;
+	font-size: 14px;
+	font-weight: 300;
+}
+#hackathon-section .hackathon-container div img {
+	padding-bottom: 5px;
+	width: 7cm;
+	height: 7cm;
+}
 /* Skills Section */
 #skills-section {
 	display: flex;
@@ -347,57 +326,113 @@ section h2::after {
 	transform: scale(1.2);
 }
 #python:hover {
-    color: #3771a1;
+	color: #3771a1;
 }
 #java:hover {
-    color: #5283a2;
+	color: #5283a2;
 }
 #cpp:hover {
 	color: #00599d;
 }
 #javascript:hover {
-    color: #f0db4f;
+	color: #f0db4f;
 }
 #react:hover {
-    color: #7cdffe;
+	color: #7cdffe;
 }
 #nodejs:hover {
-    color: #77af63;
+	color: #77af63;
 }
 #git:hover {
-    color: #f05033;
+	color: #f05033;
 }
 #database:hover {
-    color: #a7a7a7;
+	color: #a7a7a7;
 }
 #aws:hover {
-    color: #ff9a00;
+	color: #ff9a00;
 }
 #selenium:hover {
-    color: #00b400;
+	color: #00b400;
 }
-
 /* Leave a Message Section */
-#leave-message-section {
+#leave-message-section form {
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	min-height: 50vh;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background: var(--accent-color);
+	padding: 2rem;
+	width: 100%;
+	max-width: 500px;
+	gap: 1.5rem;
+}
+#leave-message-section label {
+	align-self: flex-start;
+	color: var(--text-color);
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+#leave-message-section input, 
+#leave-message-section textarea {
+	transition: all 0.3s ease;
+	border: 1px solid #bfd6c4;
+	border-radius: 5px;
+	padding: 0.8rem;
+	width: 100%;
+	font-family: inherit;
+	font-size: 1rem;
+}
+#leave-message-section input:focus, 
+#leave-message-section textarea:focus {
+	outline: none;
+	border-color: #588061;
+	box-shadow: 0 0 5px var(--highlight);
+}
+#leave-message-section textarea {
+	height: 150px;
+	resize: none;
+}
+#leave-message-section button {
+	transition: 0.2s;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--background-secondary-color);
+	cursor: pointer;
+	padding: 0.75rem 1.5rem;
+	color: #ffffff;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+#leave-message-section button:hover {
+	transition: 0.1s;
+	background-color: var(--background-primary-color);
+	color: var(--highlight);
+}
+/* Snackbar Notification */
+#snackbar {
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: opacity 0.3s ease, bottom 0.3s ease;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	background-color: #588061;
+	padding: 1rem;
+	min-width: 250px;
 	text-align: center;
-	/* Make it half the viewport height */
-    display: flex;
-	gap: 1rem;
+	color: #ffffff;
+	font-size: 1.1rem;
 }
-#leave-message-section h2 {
-	margin-bottom: 1rem;
-	font-size: 2.75rem;
-	font-weight: 700;
-}
-#leave-message-section p {
-	max-width: 600px;
-	line-height: 1.6;
-	color: #555;
-	font-size: 1.25rem;
+#snackbar.show {
+	bottom: 50px;
+	visibility: visible;
+	opacity: 1;
 }
 footer {
 	background-color: var(--accent-color);
@@ -406,23 +441,6 @@ footer {
 	color: #fff;
 	font-size: 0.875rem;
 }
-
-/* Cards Swiper */
-.swiper {
-	width: 100%;
-	overflow-x: scroll !important;
-}
-.swiper-slide {
-	width: 272px !important;
-	height: 375.75px;
-}
-.swiper-slide > a {
-	display: block;
-	transform: scale(0.9);
-	width: 272px;
-	height: 375.75px;
-}
-
 /* Media Queries for Responsiveness */
 @media (min-width: 1690px) {
 	.swiper-wrapper {
