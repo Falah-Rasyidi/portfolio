@@ -368,6 +368,10 @@ section h2::after {
 }
 
 /* Leave a Message Section */
+#leave-message-section {
+	display: flex;
+	justify-content: center;
+}
 #leave-message-section form {
 	display: flex;
 	flex-direction: column;
